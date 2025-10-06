@@ -12,3 +12,5 @@ function toggleTheme() {
   document.body.classList.toggle("dark-mode");
 }
 
+fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio")
+
