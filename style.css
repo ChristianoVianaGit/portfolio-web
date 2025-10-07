@@ -175,10 +175,18 @@ body.dark-mode .project-card {
   padding: 20px;
   border-left: 5px solid #2c3e50;
   border-radius: 10px;
-  margin-bottom: 20px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   transition: background-color 0.3s;
+  width: 100%;
+  max-width: 760px;
   height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 body.dark-mode .publication-card {
@@ -206,9 +214,10 @@ body.dark-mode .publication-card {
   position: relative;
   overflow: hidden;
   max-width: 800px;
+  height: 480px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .carousel-track {
@@ -216,18 +225,8 @@ body.dark-mode .publication-card {
   transition: transform 0.5s ease;
   flex: 1;
   scroll-snap-type: x mandatory;
-}
-
-.publication-card {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: var(--card-bg-light);
-  border-left: 5px solid #2c3e50;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  margin: 0 10px;
-  scroll-snap-align: start;
+  align-items: flex-start;
+  height: 100%;
 }
 
 body.dark-mode .publication-card {
@@ -268,10 +267,19 @@ body.dark-mode .publication-card {
     padding: 15px;
     min-width: auto;
     margin: 10px 0;
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .carousel-track {
     flex-direction: column;
     transform: none !important;
+    height: auto;
+  }
+
+  .carousel-container {
+    height: auto;
+    align-items: stretch;
   }
 }
