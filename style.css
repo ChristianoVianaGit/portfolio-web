@@ -168,3 +168,34 @@ body.dark-mode .section,
 body.dark-mode .project-card {
   background-color: var(--card-bg-dark);
 }
+
+.publication-card {
+  background-color: var(--card-bg-light);
+  padding: 20px;
+  border-left: 5px solid #2c3e50;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .publication-card {
+  background-color: var(--card-bg-dark);
+  border-left: 5px solid #f4f4f4;
+}
+
+.publication-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.publication-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.publication-card a:hover {
+  text-decoration: underline;
+}
