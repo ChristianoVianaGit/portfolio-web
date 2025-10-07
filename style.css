@@ -91,6 +91,7 @@ header {
 .profile-wrapper {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-top: -75px;
   z-index: 2;
 }
@@ -177,6 +178,7 @@ body.dark-mode .project-card {
   margin-bottom: 20px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   transition: background-color 0.3s;
+  height: 100%;
 }
 
 body.dark-mode .publication-card {
@@ -198,11 +200,6 @@ body.dark-mode .publication-card {
 
 .publication-card a:hover {
   text-decoration: underline;
-}
-
-.carousel-wrapper {
-  text-align: center;
-  margin-top: 40px;
 }
 
 .carousel-container {
