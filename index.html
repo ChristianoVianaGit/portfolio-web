@@ -65,55 +65,78 @@
       </div>
     </div>
 
-  <div class="section" id="publicacoes" role="region" aria-label="Publicações e insights">
-      <h2>Publicações e Insights</h2>
-      <p> Nesta seção, compartilho reflexões, aprendizados e experiências. São conteúdos que abordam tecnologia, inteligência artificial, carreira e desenvolvimento pessoal — sempre com o propósito de inspirar, provocar ideias e gerar conexões.</p><br>
+<div class="section" id="publicacoes" role="region" aria-label="Publicações e insights">
+  <h2>Publicações e Insights</h2>
+  <p>Nesta seção, compartilho reflexões, aprendizados e experiências. São conteúdos que abordam tecnologia, inteligência artificial, carreira e desenvolvimento pessoal — sempre com o propósito de inspirar, provocar ideias e gerar conexões.</p><br>
 
-      <div class="carousel-container">
-        <button class="carousel-btn left" onclick="moveCarousel(-1)" aria-label="Publicação anterior">←</button>
-
-        <div class="carousel-track" tabindex="0">
-          <div class="publication-card">
-            <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
-            <p>Muitos profissionais me perguntam qual a diferença entre trabalhar com Pandas e Spark no Python. Então decidi montar uma explicação prática e direta para esclarecer essa dúvida comum entre quem atua com dados.</p>
-            <p>Na publicação, comparo os dois frameworks, apresento um exemplo prático e explico quando cada um é mais indicado — seja para prototipagem local ou para processamento distribuído em larga escala.</p>
-            <p><strong>📅 Publicado em:</strong> 7 de outubro de 2025</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank">🔗 Ver publicação no LinkedIn</a>
-            <p><strong>🔖 Tags:</strong> #Python #Pandas #PySpark #DataScience #BigData #EngenhariaDeDados #MachineLearning</p>
-          </div>
-
-          <div class="publication-card">
-            <h3>O poder de uma pausa consciente ✨🌍</h3>
-            <p>Após um acidente inesperado, decidi fazer uma pausa planejada na vida profissional — não apenas por necessidade física, mas como um convite à reconexão pessoal. Nesse período, mergulhei em cursos, viagens e reflexões profundas que me ajudaram a ressignificar meu caminho.</p>
-            <p>Entre florestas tropicais, canais europeus e momentos em família, redescobri paixões, cultivei novos aprendizados e reencontrei propósito. Hoje retorno com mais energia, foco e equilíbrio — pronto para entregar o melhor com autenticidade e alma.</p>
-            <p><strong>📅 Publicado em:</strong> 31 de julho de 2025</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank">🔗 Ver publicação no LinkedIn</a>
-            <p><strong>🔖 Tags:</strong> #Equilibrio #VidaProfissional #Autoconhecimento #Transformacao #Propósito #InteligenciaEmocional #CrescimentoPessoal</p>
-          </div>
-
-          <div class="publication-card">
-            <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
-            <p>Com o crescimento acelerado da Inteligência Artificial, surgem cada vez mais opções de ferramentas — algumas gratuitas, outras pagas. Mas será que as versões gratuitas realmente se comparam às profissionais?</p>
-            <p>Nessa publicação, compartilhei uma seleção de ferramentas de IA com o objetivo de incentivar a reflexão sobre suas aplicações. Também me coloquei à disposição para uma conversa aberta sobre como escolher a ferramenta certa para cada contexto.</p>
-            <p><strong>📅 Publicado em:</strong> 20 de junho de 2025</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank">🔗 Ver publicação no LinkedIn</a>
-            <p><strong>🔖 Tags:</strong> #IA #InteligenciaArtificial #ArtificialIntelligence #FerramentasDeIA #TechForGood #AcessibilidadeDigital #MachineLearning</p>
-          </div>
-
-          <div class="publication-card">
-            <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
-            <p>Você já se viu diante de um desafio e pensou: “Será que existe uma ferramenta de IA que resolve isso?”</p>
-            <p>Nessa publicação, compartilhei uma lista com 36 ferramentas de Inteligência Artificial que podem te salvar em momentos críticos — seja para produtividade, criatividade, análise de dados, automação ou geração de ideias.</p>
-            <p>Uma curadoria prática e atualizada para quem quer explorar o poder da IA no dia a dia.</p>
-            <p><strong>📅 Publicado em:</strong> 10 de junho de 2025</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank">🔗 Ver publicação no LinkedIn</a>
-            <p><strong>🔖 Tags:</strong> #InteligenciaArtificial #FerramentasDeIA #Produtividade #Automacao #Criatividade #AItools #TechTips #Inovacao</p>
-          </div>
-        </div>
-
-        <button class="carousel-btn right" onclick="moveCarousel(1)" aria-label="Próxima publicação">→</button>
+  <div class="carousel-container">
+    <button class="carousel-btn left" onclick="moveCarousel(-1)" aria-label="Publicação anterior">←</button>
+    <div class="carousel-track" tabindex="0">
+      <div class="publication-card">
+        <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
+        <p>Comparação prática entre os frameworks Pandas e Spark no Python.</p>
+        <button class="abrir-modal" onclick="abrirModal('modal1')">Ler mais</button>
+      </div>
+      <div class="publication-card">
+        <h3>O poder de uma pausa consciente ✨🌍</h3>
+        <p>Reflexões sobre equilíbrio entre vida profissional e pessoal após um período de reconexão.</p>
+        <button class="abrir-modal" onclick="abrirModal('modal2')">Ler mais</button>
+      </div>
+      <div class="publication-card">
+        <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
+        <p>Curadoria de ferramentas de IA com análise entre versões gratuitas e profissionais.</p>
+        <button class="abrir-modal" onclick="abrirModal('modal3')">Ler mais</button>
+      </div>
+      <div class="publication-card">
+        <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
+        <p>Lista prática de ferramentas de IA para produtividade, criatividade e automação.</p>
+        <button class="abrir-modal" onclick="abrirModal('modal4')">Ler mais</button>
       </div>
     </div>
+    <button class="carousel-btn right" onclick="moveCarousel(1)" aria-label="Próxima publicação">→</button>
+  </div>
+
+  <!-- Modais -->
+  <div id="modal1" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+      <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
+      <p>Muitos profissionais me perguntam qual a diferença entre trabalhar com Pandas e Spark no Python. Então decidi montar uma explicação prática e direta para esclarecer essa dúvida comum entre quem atua com dados. Na publicação, comparo os dois frameworks, apresento um exemplo prático e explico quando cada um é mais indicado — seja para prototipagem local ou para processamento distribuído em larga escala.</p>
+      <p><strong>📅 Publicado em:</strong> 7 de outubro de 2025</p>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+      <h3>O poder de uma pausa consciente ✨🌍</h3>
+      <p>Após um acidente inesperado, decidi fazer uma pausa planejada na vida profissional — não apenas por necessidade física, mas como um convite à reconexão pessoal. Nesse período, mergulhei em cursos, viagens e reflexões profundas que me ajudaram a ressignificar meu caminho. Entre florestas tropicais, canais europeus e momentos em família, redescobri paixões, cultivei novos aprendizados e reencontrei propósito. Hoje retorno com mais energia, foco e equilíbrio — pronto para entregar o melhor com autenticidade e alma.</p>
+      <p><strong>📅 Publicado em:</strong> 31 de julho de 2025</p>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
+      <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
+      <p>Com o crescimento acelerado da Inteligência Artificial, surgem cada vez mais opções de ferramentas — algumas gratuitas, outras pagas. Mas será que as versões gratuitas realmente se comparam às profissionais? Nessa publicação, compartilhei uma seleção de ferramentas de IA com o objetivo de incentivar a reflexão sobre suas aplicações. Também me coloquei à disposição para uma conversa aberta sobre como escolher a ferramenta certa para cada contexto.</p>
+      <p><strong>📅 Publicado em:</strong> 20 de junho de 2025</p>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
+      <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
+      <p>Você já se viu diante de um desafio e pensou: “Será que existe uma ferramenta de IA que resolve isso?” Nessa publicação, compartilhei uma lista com 36 ferramentas de Inteligência Artificial que podem te salvar em momentos críticos — seja para produtividade, criatividade, análise de dados, automação ou geração de ideias. Uma curadoria prática e atualizada para quem quer explorar o poder da IA no dia a dia.</p>
+      <p><strong>📅 Publicado em:</strong> 10 de junho de 2025</p>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+    </div>
+  </div>
+</div>
 
     <div class="section" id="servicos">
       <h2>Serviços</h2>
