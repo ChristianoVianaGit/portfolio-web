@@ -24,8 +24,8 @@ function moveCarousel(direction) {
   if (currentIndex < 0) currentIndex = 0;
   if (currentIndex >= totalCards) currentIndex = totalCards - 1;
 
-  const offset = -currentIndex * 100;
-  track.style.transform = `translateX(${offset}%)`;
+  const offset = -cards[currentIndex].offsetLeft;
+  track.style.transform = `translateX(${offset}px)`;
 }
 
 function abrirModal(id) {
@@ -46,12 +46,11 @@ function fecharModal(id) {
   }, 300); // tempo igual ao da animação
 }
 
-// Fecha o modal ao clicar fora dele
 window.onclick = function(event) {
   const modais = document.querySelectorAll(".modal");
   modais.forEach(modal => {
     if (event.target === modal) {
-      modal.style.display = "none";
+      fecharModal(modal.id);
     }
   });
 };
