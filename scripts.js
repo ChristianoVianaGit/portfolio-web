@@ -26,6 +26,8 @@ function moveCarousel(direction) {
 
   const offset = -cards[currentIndex].offsetLeft;
   track.style.transform = `translateX(${offset}px)`;
+
+  atualizarBotoesCarousel();
 }
 
 function abrirModal(id) {
@@ -55,4 +57,18 @@ window.onclick = function(event) {
   });
 };
 
-fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio")
+function atualizarBotoesCarousel() {
+  const btnLeft = document.querySelector(".carousel-btn.left");
+  const btnRight = document.querySelector(".carousel-btn.right");
+  const cards = document.querySelectorAll(".publication-card");
+
+  btnLeft.disabled = currentIndex === 0;
+  btnRight.disabled = currentIndex === cards.length - 1;
+
+  btnLeft.style.opacity = currentIndex === 0 ? "0.5" : "1";
+  btnRight.style.opacity = currentIndex === cards.length - 1 ? "0.5" : "1";
+}
+
+window.onload = atualizarBotoesCarousel;
+
+fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio");

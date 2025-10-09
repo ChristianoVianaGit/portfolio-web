@@ -205,6 +205,17 @@ body.dark-mode {
 body.dark-mode .section,
 body.dark-mode .project-card {
   background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .servicos-card {
+  background-color: #333;
+  color: var(--text-dark);
+}
+
+body.dark-mode .servicos-card h3,
+body.dark-mode .servicos-card p {
+  color: var(--text-dark);
 }
 
 .publication-card {
@@ -229,6 +240,11 @@ body.dark-mode .project-card {
 body.dark-mode .publication-card {
   background-color: var(--card-bg-dark);
   border-left: 5px solid #f4f4f4;
+}
+
+body.dark-mode .publication-card h3,
+body.dark-mode .publication-card p {
+  color: var(--text-dark);
 }
 
 .publication-card h3 {
