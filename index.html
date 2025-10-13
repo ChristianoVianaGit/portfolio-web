@@ -49,6 +49,8 @@
       <p>Tenho mergulhado em uma jornada intensa de aprimoramento técnico, com foco em Machine Learning, IA, Python e plataformas de nuvem como Azure e AWS. Essa evolução é movida por uma inquietação criativa e uma vontade genuína de resolver problemas complexos com inteligência, colaboração e visão analítica.</p>
       <p>Mais do que conhecimento técnico, trago maturidade profissional, vivência multicultural e uma abordagem orientada à melhoria contínua. Acredito que tecnologia é ponte — entre ideias, pessoas e possibilidades.</p>
       <p>E falando em conexões, a música também faz parte da minha essência. Nas horas vagas, sou músico. Vejo na arte o mesmo poder transformador que encontro na ciência: a capacidade de provocar, inspirar e unir. Compor melodias ou desenvolver soluções inovadoras são, para mim, expressões de uma mesma energia criativa.</p>
+      <p>Quer conhecer o meu curriculo completo?<br>
+         Clique em 🔗 <a href="https://christianovianagit.github.io/curriculo-web/" target="_blank">Currículo - Christiano Viana</a> ou acesse o meu LinkedIn: <a href="https://www.linkedin.com/in/christianoviana" target="_blank">linkedin.com/in/christianoviana</a></p>
     </div>
 
     <div class="section" id="projetos">
@@ -75,8 +77,12 @@
       <p>Nesta seção, compartilho reflexões, aprendizados e experiências. São conteúdos que abordam tecnologia, inteligência artificial, carreira e desenvolvimento pessoal — sempre com o propósito de inspirar, provocar ideias e gerar conexões.</p><br>
 
       <div class="carousel-container">
-        <button class="carousel-btn left" onclick="moveCarousel(-1)" aria-label="Publicação anterior">←</button>
         <div class="carousel-track" tabindex="0" style="text-align: center">
+          <div class="publication-card">
+            <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
+            <p>As três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow.</p>
+            <button class="abrir-modal" onclick="abrirModal('modal6')">Ler mais</button>
+          </div>
           <div class="publication-card">
             <h3>5 recursos do Databricks que todo engenheiro de dados precisa conhecer 🚀</h3>
             <p>Os 5 principais recursos do Databricks para quem trabalha com dados.</p>
@@ -103,10 +109,19 @@
             <button class="abrir-modal" onclick="abrirModal('modal1')">Ler mais</button>
           </div>
         </div>
-        <button class="carousel-btn right" onclick="moveCarousel(1)" aria-label="Próxima publicação">→</button>
       </div>
 
       <!-- Modais -->
+      <div id="modal6" class="modal">
+        <div class="modal-conteudo">
+          <span class="fechar" onclick="fecharModal('modal6')">&times;</span>
+          <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
+          <p>Compartilhei três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow. São dicas diretas e aplicáveis — desde o uso inteligente de sensores até a padronização de tarefas — pensadas para quem busca eficiência e escalabilidade no dia a dia com dados.</p>
+          <p><strong>📅 Publicado em:</strong> 13 de outubro de 2025</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7383489816950210560/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+        </div>
+      </div>
+
       <div id="modal5" class="modal">
         <div class="modal-conteudo">
           <span class="fechar" onclick="fecharModal('modal5')">&times;</span>
@@ -193,11 +208,40 @@
 
     <div class="section" id="contato">
       <h2>Contato</h2>
-      <p>Fale comigo!<br>
+      <p>Preencha o formulário abaixo.<br>
          Será uma honra poder te ajudar!</p>
-      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/christianoviana" target="_blank">linkedin.com/in/christianoviana</a></p>
+
+      <form id="form-contato" class="form-contato">
+        <!-- Honeypot para bots -->
+        <input type="text" name="website" style="display:none">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Modal de agradecimento -->
+    <div id="modal-sucesso" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-sucesso')">&times;</span>
+        <h3>Mensagem enviada com sucesso! ✅</h3>
+        <p>Obrigado por entrar em contato. Responderei o mais breve possível!</p>
+      </div>
     </div>
 
     <script src="scripts.js"></script>
   </body>
 </html>
+
+

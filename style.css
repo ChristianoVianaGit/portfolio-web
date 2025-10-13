@@ -218,6 +218,10 @@ body.dark-mode .servicos-card p {
   color: var(--text-dark);
 }
 
+body.dark-mode .form-contato label {
+  color: var(--text-dark);
+}
+
 .publication-card {
   background-color: var(--card-bg-light);
   padding: 20px;
@@ -226,15 +230,16 @@ body.dark-mode .servicos-card p {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   transition: background-color 0.3s;
   width: 100%;
-  max-width: 760px;
+  max-width: none;
   height: 400px;
   overflow-y: auto;
   box-sizing: border-box;
-  margin: 0 auto;
   scroll-snap-align: start;
   scroll-behavior: smooth;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  flex: 0 0 calc(100% / 3 - 20px); /* 3 cards por vez com espaçamento */
+  margin: 0;
 }
 
 body.dark-mode .publication-card {
@@ -280,6 +285,9 @@ body.dark-mode .publication-card p {
   scroll-snap-type: x mandatory;
   align-items: flex-start;
   height: 100%;
+  gap: 20px; /* espaço entre os cards */
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .carousel-btn {
@@ -294,14 +302,6 @@ body.dark-mode .publication-card p {
   z-index: 1;
   font-size: 18px;
   border-radius: 50%;
-}
-
-.carousel-btn.left {
-  left: 10px;
-}
-
-.carousel-btn.right {
-  right: 10px;
 }
 
 @media (max-width: 600px) {
@@ -335,6 +335,18 @@ body.dark-mode .publication-card p {
   .servicos-card {
     flex: 1 1 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .publication-card {
+    flex: 0 0 calc(100% / 2 - 20px); /* 2 cards em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .publication-card {
+    flex: 0 0 100%; /* 1 card em celulares */
   }
 }
 
@@ -422,4 +434,59 @@ body.dark-mode .modal-conteudo {
 
 .modal-conteudo.fechando {
   animation: slideDown 0.4s ease forwards;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-contato label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--card-bg-light);
+  color: var(--text-light);
+}
+
+body.dark-mode .form-contato input,
+body.dark-mode .form-contato textarea {
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+  border: 1px solid #555;
+}
+
+.form-contato button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #34495e;
+}
+
+#modal-sucesso .modal-conteudo h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#modal-sucesso .modal-conteudo p {
+  font-size: 16px;
 }
