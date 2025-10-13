@@ -10,6 +10,15 @@ function closeSidebar() {
 
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
+
+  const themeBtn = document.querySelector(".theme-toggle");
+  if (document.body.classList.contains("dark-mode")) {
+    themeBtn.textContent = "☀️";
+    themeBtn.setAttribute("aria-label", "Alternar para tema claro");
+  } else {
+    themeBtn.textContent = "🌙";
+    themeBtn.setAttribute("aria-label", "Alternar para tema escuro");
+  }
 }
 
 let currentIndex = 0;
@@ -17,12 +26,21 @@ let currentIndex = 0;
 function moveCarousel(direction) {
   const track = document.querySelector(".carousel-track");
   const cards = document.querySelectorAll(".publication-card");
-  const visibleCards = 3; // número de cards visíveis
-  const cardWidth = cards[0].offsetWidth + 20; // largura do card + gap
 
+  // Calcular número de cards visíveis dinamicamente
+  let visibleCards;
+  if (window.innerWidth < 600) {
+    visibleCards = 1;
+  } else if (window.innerWidth < 1024) {
+    visibleCards = 2;
+  } else {
+    visibleCards = 3;
+  }
+
+  const cardWidth = cards[0].offsetWidth + 20;
   const maxIndex = cards.length - visibleCards;
-  currentIndex += direction;
 
+  currentIndex += direction;
   if (currentIndex < 0) currentIndex = 0;
   if (currentIndex > maxIndex) currentIndex = maxIndex;
 
@@ -36,7 +54,16 @@ function atualizarBotoesCarousel() {
   const btnLeft = document.querySelector(".carousel-btn.left");
   const btnRight = document.querySelector(".carousel-btn.right");
   const cards = document.querySelectorAll(".publication-card");
-  const visibleCards = 3;
+
+  let visibleCards;
+  if (window.innerWidth < 600) {
+    visibleCards = 1;
+  } else if (window.innerWidth < 1024) {
+    visibleCards = 2;
+  } else {
+    visibleCards = 3;
+  }
+
   const maxIndex = cards.length - visibleCards;
 
   btnLeft.disabled = currentIndex === 0;
@@ -45,6 +72,10 @@ function atualizarBotoesCarousel() {
   btnLeft.style.opacity = currentIndex === 0 ? "0.5" : "1";
   btnRight.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
 }
+
+window.addEventListener("resize", () => {
+  moveCarousel(0);
+});
 
 function abrirModal(id) {
   document.getElementById(id).style.display = "block";
@@ -61,7 +92,7 @@ function fecharModal(id) {
     modal.style.display = "none";
     conteudo.classList.remove("fechando");
     modal.classList.remove("fechando");
-  }, 300); // tempo igual ao da animação
+  }, 300);
 }
 
 window.onclick = function(event) {
@@ -76,7 +107,7 @@ window.onclick = function(event) {
 window.onload = atualizarBotoesCarousel;
 
 function mostrarModal(event) {
-  event.preventDefault(); // impede envio real do formulário
+  event.preventDefault();
   document.getElementById("modal-sucesso").style.display = "block";
 }
 
@@ -85,41 +116,46 @@ document.getElementById("form-contato").addEventListener("submit", function (eve
 
   const form = event.target;
   const formData = new FormData(form);
+  const submitBtn = form.querySelector("button[type='submit']");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Enviando...";
 
-  // 1. Verificar se o nome tem apenas letras
   const nome = formData.get("nome").trim();
   if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
     alert("O nome deve conter apenas letras.");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Enviar";
     return;
   }
 
-  // 2. Impedir envio se o telefone tiver letras
   const telefone = formData.get("telefone").trim();
   if (!/^\d{10,11}$/.test(telefone)) {
     alert("O telefone deve conter apenas números (10 ou 11 dígitos).");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Enviar";
     return;
   }
 
-  // 3. Validar que a mensagem não contenha links
   const mensagem = formData.get("mensagem").trim();
   if (/https?:\/\/|www\./i.test(mensagem)) {
     alert("A mensagem não deve conter links.");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Enviar";
     return;
   }
 
-  // 4. Sanitizar entrada (remove tags HTML)
   formData.set("nome", nome.replace(/<[^>]*>?/gm, ""));
   formData.set("email", formData.get("email").replace(/<[^>]*>?/gm, ""));
   formData.set("telefone", telefone.replace(/<[^>]*>?/gm, ""));
   formData.set("mensagem", mensagem.replace(/<[^>]*>?/gm, ""));
 
-  // 5. Evitar spam com honeypot
   if (formData.get("website")) {
-    return; // campo oculto preenchido → provável bot
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Enviar";
+    return;
   }
 
-  // Enviar via Formsubmit
-  fetch("https://formsubmit.co/viana.cviana@gmaiil.com", {
+  fetch("https://formsubmit.co/viana.cviana@gmail.com", {
     method: "POST",
     body: formData,
     headers: {
@@ -130,13 +166,23 @@ document.getElementById("form-contato").addEventListener("submit", function (eve
       if (response.ok) {
         form.reset();
         document.getElementById("modal-sucesso").style.display = "block";
+
+        submitBtn.textContent = "Enviado ✅";
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Enviar";
+        }, 3000); // 3 segundos
       } else {
         alert("Ocorreu um erro ao enviar. Tente novamente.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar";
       }
     })
     .catch(error => {
       console.error("Erro:", error);
       alert("Erro de conexão. Verifique sua internet.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Enviar";
     });
 });
 

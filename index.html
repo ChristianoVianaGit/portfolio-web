@@ -14,8 +14,8 @@
   <body>
     <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
-    <div id="mySidebar" class="sidebar">
-      <a href="#Home">Home</a>
+    <div id="mySidebar" class="sidebar" role="navigation" aria-label="Menu lateral de navegação">
+      <a href="#home">Home</a>
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a href="#publicacoes">Publicações</a>
@@ -24,11 +24,11 @@
     </div>
 
     <header>
-      <span class="menu-icon" onclick="openSidebar()">☰ Christiano Viana</span>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <span class="menu-icon" onclick="openSidebar()" aria-label="Abrir menu lateral">☰ Christiano Viana</span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">🌙</button>
     </header>
 
-    <img src="./imagens/capa.png" alt="Imagem de capa com tema tecnológico" class="cover">
+    <img src="./imagens/capa.png" alt="Imagem de capa com elementos visuais de tecnologia e dados" class="cover">
 
     <div class="profile-wrapper">
       <img src="./imagens/foto.jpeg" alt="Foto de perfil de Christiano Viana" class="profile-pic">
@@ -49,8 +49,8 @@
       <p>Tenho mergulhado em uma jornada intensa de aprimoramento técnico, com foco em Machine Learning, IA, Python e plataformas de nuvem como Azure e AWS. Essa evolução é movida por uma inquietação criativa e uma vontade genuína de resolver problemas complexos com inteligência, colaboração e visão analítica.</p>
       <p>Mais do que conhecimento técnico, trago maturidade profissional, vivência multicultural e uma abordagem orientada à melhoria contínua. Acredito que tecnologia é ponte — entre ideias, pessoas e possibilidades.</p>
       <p>E falando em conexões, a música também faz parte da minha essência. Nas horas vagas, sou músico. Vejo na arte o mesmo poder transformador que encontro na ciência: a capacidade de provocar, inspirar e unir. Compor melodias ou desenvolver soluções inovadoras são, para mim, expressões de uma mesma energia criativa.</p>
-      <p>Quer conhecer o meu curriculo completo?<br>
-         Clique em 🔗 <a href="https://christianovianagit.github.io/curriculo-web/" target="_blank">Currículo - Christiano Viana</a> ou acesse o meu LinkedIn: <a href="https://www.linkedin.com/in/christianoviana" target="_blank">linkedin.com/in/christianoviana</a></p>
+      <p>Quer conhecer o meu currículo completo?<br>
+         Clique em <a href="https://christianovianagit.github.io/curriculo-web/" target="_blank" rel="noopener noreferrer">Currículo - Christiano Viana</a> ou acesse o meu LinkedIn: <a href="https://www.linkedin.com/in/christianoviana" target="_blank" rel="noopener noreferrer">linkedin.com/in/christianoviana</a></p>
     </div>
 
     <div class="section" id="projetos">
@@ -81,32 +81,32 @@
           <div class="publication-card">
             <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
             <p>As três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal6')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal6')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
           <div class="publication-card">
             <h3>5 recursos do Databricks que todo engenheiro de dados precisa conhecer 🚀</h3>
             <p>Os 5 principais recursos do Databricks para quem trabalha com dados.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal5')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal5')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
           <div class="publication-card">
             <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
             <p>Comparação prática entre os frameworks Pandas e Spark no Python.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal4')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal4')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
           <div class="publication-card">
             <h3>O poder de uma pausa consciente ✨🌍</h3>
             <p>Reflexões sobre equilíbrio entre vida profissional e pessoal após um período de reconexão.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal3')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal3')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
           <div class="publication-card">
             <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
             <p>Curadoria de ferramentas de IA relacionando as versões gratuitas e profissionais.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal2')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal2')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
           <div class="publication-card">
             <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
             <p>Lista prática de ferramentas de IA para produtividade, criatividade e automação.</p>
-            <button class="abrir-modal" onclick="abrirModal('modal1')">Ler mais</button>
+            <button class="abrir-modal" onclick="abrirModal('modal1')" aria-label="Abrir publicação completa">Ler mais</button>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
           <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
           <p>Compartilhei três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow. São dicas diretas e aplicáveis — desde o uso inteligente de sensores até a padronização de tarefas — pensadas para quem busca eficiência e escalabilidade no dia a dia com dados.</p>
           <p><strong>📅 Publicado em:</strong> 13 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7383489816950210560/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7383489816950210560/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
 
@@ -129,7 +129,7 @@
           <p>O Databricks vem ganhando espaço como uma das plataformas mais completas para engenharia de dados e IA. Nesta publicação, compartilhei de forma leve e visual os 5 recursos que considero indispensáveis para qualquer profissional da área.</p>
           <p>Cada item foi apresentado de forma direta, pensado para facilitar o entendimento. A ideia é mostrar como essas ferramentas podem transformar a forma como lidamos com dados — da ingestão à governança, passando por machine learning e orquestração.</p>
           <p><strong>📅 Publicado em:</strong> 9 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382103119221944320/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382103119221944320/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
 
@@ -139,7 +139,7 @@
           <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
           <p>Muitos profissionais me perguntam qual a diferença entre trabalhar com Pandas e Spark no Python. Então decidi montar uma explicação prática e direta para esclarecer essa dúvida comum entre quem atua com dados. Na publicação, comparo os dois frameworks, apresento um exemplo prático e explico quando cada um é mais indicado — seja para prototipagem local ou para processamento distribuído em larga escala.</p>
           <p><strong>📅 Publicado em:</strong> 7 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
 
@@ -149,7 +149,7 @@
           <h3>O poder de uma pausa consciente ✨🌍</h3>
           <p>Após um acidente inesperado, decidi fazer uma pausa planejada na vida profissional — não apenas por necessidade física, mas como um convite à reconexão pessoal. Nesse período, mergulhei em cursos, viagens e reflexões profundas que me ajudaram a ressignificar meu caminho. Entre florestas tropicais, canais europeus e momentos em família, redescobri paixões, cultivei novos aprendizados e reencontrei propósito. Hoje retorno com mais energia, foco e equilíbrio — pronto para entregar o melhor com autenticidade e alma.</p>
           <p><strong>📅 Publicado em:</strong> 31 de julho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
 
@@ -159,7 +159,7 @@
           <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
           <p>Com o crescimento acelerado da Inteligência Artificial, surgem cada vez mais opções de ferramentas — algumas gratuitas, outras pagas. Mas será que as versões gratuitas realmente se comparam às profissionais? Nessa publicação, compartilhei uma seleção de ferramentas de IA com o objetivo de incentivar a reflexão sobre suas aplicações. Também me coloquei à disposição para uma conversa aberta sobre como escolher a ferramenta certa para cada contexto.</p>
           <p><strong>📅 Publicado em:</strong> 20 de junho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
           <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
           <p>Você já se viu diante de um desafio e pensou: “Será que existe uma ferramenta de IA que resolve isso?” Nessa publicação, compartilhei uma lista com 36 ferramentas de Inteligência Artificial que podem te salvar em momentos críticos — seja para produtividade, criatividade, análise de dados, automação ou geração de ideias. Uma curadoria prática e atualizada para quem quer explorar o poder da IA no dia a dia.</p>
           <p><strong>📅 Publicado em:</strong> 10 de junho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank">🔗 Ver publicação no LinkedIn</a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
         </div>
       </div>
     </div>
@@ -181,7 +181,7 @@
       <div class="servicos-grid">
         <div class="servicos-card">
           <h3>📊 Análise Descritiva</h3>
-          <p>Aplicar diferentes técnicas estatisticas para descrever, organizar e sumarizar seu conjunto de dados para que possa entender o que aconteceu.</p>
+          <p>Aplicar diferentes técnicas estatísticas para descrever, organizar e sumarizar seu conjunto de dados para que possa entender o que aconteceu.</p>
         </div>
         <div class="servicos-card">
           <h3>🔍 Análise Diagnóstica</h3>
@@ -189,7 +189,7 @@
         </div>
         <div class="servicos-card">
           <h3>📈 Análise Preditiva</h3>
-          <p>Criar modelos preditivos que analisem fatos hitóricos e atuais para fazer previsões sobre eventos futuros ou desconhecidos de seu interesse.</p>
+          <p>Criar modelos preditivos que analisem fatos históricos e atuais para fazer previsões sobre eventos futuros ou desconhecidos de seu interesse.</p>
         </div>
         <div class="servicos-card">
           <h3>📋 Análise Prescritiva</h3>
@@ -243,5 +243,3 @@
     <script src="scripts.js"></script>
   </body>
 </html>
-
-

@@ -9,10 +9,14 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -231,15 +235,18 @@ body.dark-mode .form-contato label {
   transition: background-color 0.3s;
   width: 100%;
   max-width: none;
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   overflow-y: auto;
   box-sizing: border-box;
   scroll-snap-align: start;
   scroll-behavior: smooth;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  flex: 0 0 calc(100% / 3 - 20px); /* 3 cards por vez com espaçamento */
+  flex: 1 1 calc(100% / 3 - 20px); /* 3 cards por vez com espaçamento */
   margin: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 body.dark-mode .publication-card {
@@ -280,7 +287,7 @@ body.dark-mode .publication-card p {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, gap 0.3s ease;
   flex: 1;
   scroll-snap-type: x mandatory;
   align-items: flex-start;
@@ -315,9 +322,11 @@ body.dark-mode .publication-card p {
     padding: 15px;
     min-width: auto;
     margin: 10px 0;
-    height: auto;
     max-height: none;
     overflow-y: visible;
+    min-height: auto;
+    height: auto;
+    flex: 0 0 100%;
   }
 
   .carousel-track {
@@ -341,12 +350,6 @@ body.dark-mode .publication-card p {
 @media (max-width: 1024px) {
   .publication-card {
     flex: 0 0 calc(100% / 2 - 20px); /* 2 cards em tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  .publication-card {
-    flex: 0 0 100%; /* 1 card em celulares */
   }
 }
 
