@@ -180,6 +180,38 @@ header {
   margin-top: 10px;
 }
 
+.publicacoes-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.publicacoes-card {
+  background-color: var(--card-bg-light);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  position: relative;
+  border-left: 5px solid #2c3e50;
+}
+
+.publicacoes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: #f9f9f9;
+}
+
+.publicacoes-indicadores {
+  text-align: center;
+  margin-top: 10px;
+}
+
 @media (max-width: 600px) {
   .profile-pic {
     width: 120px;
@@ -222,134 +254,29 @@ body.dark-mode .servicos-card p {
   color: var(--text-dark);
 }
 
+body.dark-mode .publicacoes-card {
+  background-color: #333;
+  color: var(--text-dark);
+}
+
+body.dark-mode .publicacoes-card h3,
+body.dark-mode .publicacoes-card p {
+  color: var(--text-dark);
+}
+
 body.dark-mode .form-contato label {
   color: var(--text-dark);
 }
 
-.publication-card {
-  background-color: var(--card-bg-light);
-  padding: 20px;
-  border-left: 5px solid #2c3e50;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
-  width: 100%;
-  max-width: none;
-  min-height: 400px;
-  height: auto;
-  overflow-y: auto;
-  box-sizing: border-box;
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  flex: 1 1 calc(100% / 3 - 20px); /* 3 cards por vez com espaçamento */
-  margin: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-body.dark-mode .publication-card {
-  background-color: var(--card-bg-dark);
-  border-left: 5px solid #f4f4f4;
-}
-
-body.dark-mode .publication-card h3,
-body.dark-mode .publication-card p {
-  color: var(--text-dark);
-}
-
-.publication-card h3 {
-  margin-top: 0;
-  color: #2c3e50;
-}
-
-.publication-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #2980b9;
-  text-decoration: none;
-}
-
-.publication-card a:hover {
-  text-decoration: underline;
-}
-
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  max-width: 800px;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease, gap 0.3s ease;
-  flex: 1;
-  scroll-snap-type: x mandatory;
-  align-items: flex-start;
-  height: 100%;
-  gap: 20px; /* espaço entre os cards */
-  overflow-x: auto;
-  padding: 10px;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #2c3e50;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-  font-size: 18px;
-  border-radius: 50%;
-}
-
 @media (max-width: 600px) {
-  .carousel-btn {
-    font-size: 14px;
-    padding: 8px;
-    display: none;
-  }
-
-  .publication-card {
-    padding: 15px;
-    min-width: auto;
-    margin: 10px 0;
-    max-height: none;
-    overflow-y: visible;
-    min-height: auto;
-    height: auto;
-    flex: 0 0 100%;
-  }
-
-  .carousel-track {
-    flex-direction: column;
-    transform: none !important;
-    height: auto;
-    overflow-x: auto;
-  }
-
-  .carousel-container {
-    height: auto;
-    align-items: stretch;
-  }
-
   .servicos-card {
     flex: 1 1 100%;
     margin-bottom: 20px;
   }
-}
 
-@media (max-width: 1024px) {
-  .publication-card {
-    flex: 0 0 calc(100% / 2 - 20px); /* 2 cards em tablets */
+  .publicacoes-card {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -492,4 +419,13 @@ body.dark-mode .form-contato textarea {
 
 #modal-sucesso .modal-conteudo p {
   font-size: 16px;
+}
+
+.abrir-modal:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+.abrir-modal {
+  transition: outline 0.2s ease;
 }

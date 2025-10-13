@@ -21,62 +21,6 @@ function toggleTheme() {
   }
 }
 
-let currentIndex = 0;
-
-function moveCarousel(direction) {
-  const track = document.querySelector(".carousel-track");
-  const cards = document.querySelectorAll(".publication-card");
-
-  // Calcular número de cards visíveis dinamicamente
-  let visibleCards;
-  if (window.innerWidth < 600) {
-    visibleCards = 1;
-  } else if (window.innerWidth < 1024) {
-    visibleCards = 2;
-  } else {
-    visibleCards = 3;
-  }
-
-  const cardWidth = cards[0].offsetWidth + 20;
-  const maxIndex = cards.length - visibleCards;
-
-  currentIndex += direction;
-  if (currentIndex < 0) currentIndex = 0;
-  if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-  const offset = -(currentIndex * cardWidth);
-  track.style.transform = `translateX(${offset}px)`;
-
-  atualizarBotoesCarousel();
-}
-
-function atualizarBotoesCarousel() {
-  const btnLeft = document.querySelector(".carousel-btn.left");
-  const btnRight = document.querySelector(".carousel-btn.right");
-  const cards = document.querySelectorAll(".publication-card");
-
-  let visibleCards;
-  if (window.innerWidth < 600) {
-    visibleCards = 1;
-  } else if (window.innerWidth < 1024) {
-    visibleCards = 2;
-  } else {
-    visibleCards = 3;
-  }
-
-  const maxIndex = cards.length - visibleCards;
-
-  btnLeft.disabled = currentIndex === 0;
-  btnRight.disabled = currentIndex >= maxIndex;
-
-  btnLeft.style.opacity = currentIndex === 0 ? "0.5" : "1";
-  btnRight.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
-}
-
-window.addEventListener("resize", () => {
-  moveCarousel(0);
-});
-
 function abrirModal(id) {
   document.getElementById(id).style.display = "block";
 }
@@ -103,8 +47,6 @@ window.onclick = function(event) {
     }
   });
 };
-
-window.onload = atualizarBotoesCarousel;
 
 function mostrarModal(event) {
   event.preventDefault();
