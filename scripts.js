@@ -70,4 +70,11 @@ document.getElementById("form-contato").addEventListener("submit", function () {
   return true;
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("sucesso") === "true") {
+    document.getElementById("modal-sucesso").style.display = "block";
+  }
+});
+
 fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio");
