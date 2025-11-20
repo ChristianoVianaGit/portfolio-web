@@ -460,3 +460,29 @@ footer {
   background-color: #0A66C2;
   font-family: "SF Pro Text", Helvetica, sans-serif;
 }
+
+footer {
+  background-color: var(--petroleo-dark);
+  color: white;
+  padding: 10px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 0.9em;
+}
+
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.language {
+  margin-left: auto;
+  white-space: nowrap;
+}
