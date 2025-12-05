@@ -244,26 +244,17 @@ body.dark-mode .project-card {
   color: var(--text-dark);
 }
 
-body.dark-mode .servicos-card {
-  background-color: #333;
-  color: var(--text-dark);
-}
-
-body.dark-mode .servicos-card h3,
-body.dark-mode .servicos-card p {
-  color: var(--text-dark);
-}
-
+body.dark-mode th,
+body.dark-mode .servicos-card,
 body.dark-mode .publicacoes-card {
   background-color: #333;
   color: var(--text-dark);
 }
 
 body.dark-mode .publicacoes-card h3,
-body.dark-mode .publicacoes-card p {
-  color: var(--text-dark);
-}
-
+body.dark-mode .publicacoes-card p,
+body.dark-mode .servicos-card h3,
+body.dark-mode .servicos-card p,
 body.dark-mode .form-contato label {
   color: var(--text-dark);
 }
@@ -437,14 +428,6 @@ body.dark-mode .form-contato textarea {
   }
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2c3e50;
-  color: white;
-  font-size: 14px;
-}
-
 .libutton {
   display: flex;
   flex-direction: column;
@@ -462,7 +445,7 @@ footer {
 }
 
 footer {
-  background-color: var(--petroleo-dark);
+  background-color: #2c3e50;
   color: white;
   padding: 10px 20px;
 }
@@ -485,4 +468,137 @@ footer {
 .language {
   margin-left: auto;
   white-space: nowrap;
+}
+
+/* Container em duas colunas (igual ao LinkedIn) */
+.newsletter-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Imagem grande à esquerda */
+.newsletter-img-left {
+  width: 180px;
+  border-radius: 6px;
+}
+
+/* Texto à direita */
+.newsletter-content {
+  flex: 1;
+  text-align: left;
+}
+
+.newsletter-content h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.newsletter-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.news-btn,
+.news-btn-outline {
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* Botão azul */
+.news-btn {
+  background: #0a66c2;
+  color: white;
+}
+.news-btn:hover {
+  background: #004f93;
+}
+
+/* Botão com contorno */
+.news-btn-outline {
+  border: 2px solid #0a66c2;
+  color: #0a66c2;
+}
+.news-btn-outline:hover {
+  background: #e7f3ff;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-content {
+    text-align: center;
+  }
+}
+
+#newsletter,
+#newsletter * {
+  text-align: left !important;
+}
+
+.newsletter-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+#newsletter h2 {
+  text-align: center !important;
+}
+
+.newsletter-tag-left {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.newsletter-tag-right {
+  margin-left: auto !important;
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* Mobile: coloca um abaixo do outro */
+@media (max-width: 700px) {
+  .newsletter-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #ecf0f1;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .newsletter-buttons {
+    justify-content: center;
+    gap: 20px;
+  }
 }

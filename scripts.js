@@ -57,8 +57,9 @@ document.getElementById("form-contato").addEventListener("submit", function () {
     return false;
   }
 
-  if (!/^\d{10,11}$/.test(telefone)) {
-    alert("O telefone deve conter apenas números (10 ou 11 dígitos).");
+  const telefoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
+  if (!telefoneRegex.test(telefone)) {
+    alert("Informe um telefone válido. Exemplos: (11) 91234-5678 ou 11912345678.");
     return false;
   }
 
@@ -72,8 +73,12 @@ document.getElementById("form-contato").addEventListener("submit", function () {
 
 window.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
+
   if (urlParams.get("sucesso") === "true") {
     document.getElementById("modal-sucesso").style.display = "block";
+
+    // Remove o parâmetro sem recarregar a página
+    history.replaceState({}, document.title, window.location.pathname);
   }
 });
 

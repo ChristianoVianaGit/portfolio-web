@@ -25,6 +25,7 @@
       <a href="#home">Home</a>
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#publicacoes">Publicações</a>
       <a href="#servicos">Serviços</a>
       <a href="#contato">Contato</a>
@@ -79,194 +80,60 @@
       </div>
     </div>
 
-    <div class="section" id="publicacoes" role="region" aria-label="Publicações e insights">
-      <h2>Publicações e Insights</h2>
-      <p>Nesta seção, compartilho reflexões, aprendizados e experiências. São conteúdos que abordam tecnologia, inteligência artificial, carreira e desenvolvimento pessoal — sempre com o propósito de inspirar, provocar ideias e gerar conexões.</p><br>
+    <div class="section" id="newsletter">
+      <div class="newsletter-container">
+        <img src="./imagens/Newsletter.png" alt="Newsletter Engenharia de Dados em Foco" class="newsletter-img-left">
 
-      <div class="publicacoes-grid">
-        <div class="publicacoes-card">
-          <h3>🧩 No Code / Low Code: ameaça ou aliada da engenharia de dados?</h3>
-          <p>Ferramentas visuais estão transformando a forma como projetamos e entregamos soluções de dados, provocando debates e criando novas oportunidades.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal11')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>☁️ Cloud-Native e DataOps: A nova espinha dorsal da engenharia de dados?</h3>
-          <p>Infraestrutura como código, pipelines versionados e práticas de DataOps estão redefinindo a engenharia de dados moderna.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal10')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>🚨 ETL está com os dias contados? 🔄</h3>
-          <p>Zero-ETL está ganhando força com arquiteturas orientadas por eventos e integrações nativas. Menos latência, mais agilidade — será o fim do modelo tradicional?</p>
-          <button class="abrir-modal" onclick="abrirModal('modal9')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>Engenharia de Dados: o que está mudando? 🚀</h3>
-          <p>As principais tendências que estão transformando o papel do engenheiro de dados — da IA generativa ao Zero-ETL.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal8')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>Dica rápida para quem trabalha com dados 🚀</h3>
-          <p>Menos ruído, mais valor. Engenharia de dados não é só sobre pipelines - é sobre propósito.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal7')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
-          <p>As três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal6')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>5 recursos do Databricks que todo engenheiro de dados precisa conhecer 🚀</h3>
-          <p>Os 5 principais recursos do Databricks para quem trabalha com dados.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal5')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
-          <p>Comparação prática entre os frameworks Pandas e Spark no Python.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal4')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>O poder de uma pausa consciente ✨🌍</h3>
-          <p>Reflexões sobre equilíbrio entre vida profissional e pessoal após um período de reconexão.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal3')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
-          <p>Curadoria de ferramentas de IA relacionando as versões gratuitas e profissionais.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal2')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-        <div class="publicacoes-card">
-          <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
-          <p>Lista prática de ferramentas de IA para produtividade, criatividade e automação.</p>
-          <button class="abrir-modal" onclick="abrirModal('modal1')" aria-label="Abrir publicação completa">Ler mais</button>
-        </div>
-      </div>
+        <div class="newsletter-content">
+          <div class="newsletter-header">
+            <span class="newsletter-tag-left">📧 Newsletter</span>
+            <span class="newsletter-tag-right">Publicada quinzenalmente</span>
+          </div>
 
-      <!-- Modais -->
-      <div id="modal11" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal11')">&times;</span>
-          <h3>🧩 No Code / Low Code: ameaça ou aliada da engenharia de dados?</h3>
-          <p>Plataformas que permitem criar pipelines e dashboards sem escrever código estão democratizando o acesso à engenharia de dados, isso abre espaço para profissionais não técnicos contribuírem com insights e análises.</p>
-          <p>Na terceira publicação da série sobre tendências em engenharia de dados, compartilhei reflexões sobre o papel das ferramentas No Code / Low Code e como elas podem empoderar, não substituir profissionais técnicos.</p>
-          <p><strong>📅 Publicado em:</strong> 12 de novembro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394358798552907776//" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-      <div id="modal10" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal10')">&times;</span>
-          <h3>☁️ Cloud-Native e DataOps: a nova espinha dorsal da engenharia de dados?</h3>
-          <p>Empresas estão migrando para infraestruturas totalmente nativas em nuvem, com foco em escalabilidade e automação, ao mesmo tempo em que o DataOps está se consolidando como prática essencial para garantir qualidade, governança e agilidade nos fluxos de dados.</p>
-          <p>Nesta publicação, falei sobre Arquiteturas Cloud-Native e práticas de DataOps. Dois pilares que estão redefinindo como projetamos, entregamos e mantemos soluções de dados.</p>
-          <p><strong>📅 Publicado em:</strong> 5 de novembro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7391816449415086080/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-      <div id="modal9" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal9')">&times;</span>
-          <h3>🚨 ETL está com os dias contados? 🔄</h3>
-          <p><strong>Zero-ETL não é só tendência — é provocação.</strong> Com decisões cada vez mais em tempo real, será que o modelo tradicional de ETL ainda faz sentido?</p>
-          <p>Nesta publicação, compartilho reflexões e exemplos práticos sobre como arquiteturas modernas estão transformando a engenharia de dados.</p>
-          <p><strong>📅 Publicado em:</strong> 29 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7389265668350820352/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
+          <h2>Engenharia de Dados em Foco</h2>
 
-      <div id="modal8" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal8')">&times;</span>
-          <h3>Engenharia de Dados: o que está mudando? 🚀</h3>
-          <p>Estamos vivendo uma revolução silenciosa na engenharia de dados. A convergência entre IA generativa, pipelines em tempo real e arquiteturas cloud-native está mudando tudo — e quem acompanha essas transformações está um passo à frente.</p>
-          <p>Nesta publicação, compartilhei as 5 tendências que considero essenciais para quem atua com dados e me comprometi a falar um pouco mais sobre cada item nas próximas publicações:</p>
-          <ul>
-            <li>Zero-ETL e pipelines em tempo real</li>
-            <li>Arquiteturas Cloud-Native e DataOps</li>
-            <li>Ferramentas No Code / Low Code</li>
-            <li>Integração com IA Generativa</li>
-            <li>Edge Computing e IoT</li>
-          </ul>
-          <p><strong>📅 Publicado em:</strong> 22 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7386770132288716800/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
+          <p>Uma newsletter quinzenal sobre engenharia de dados, BI, IA e Cloud.<br>
+          Casos reais, tendências e recomendações.</p>
 
-      <div id="modal7" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal7')">&times;</span>
-          <h3>Dica rápida para quem trabalha com dados 🚀</h3>
-          <p>Nesta publicação, compartilhei recomendações práticas para refletir e discutir no início de um projeto de dados — simples na forma, mas com potencial de gerar grande impacto nos resultados.</p>
-          <p><strong>📅 Publicado em:</strong> 15 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7384247738026201088/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal6" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal6')">&times;</span>
-          <h3>3 formas de otimizar seus pipelines de dados com Apache Airflow 🚀</h3>
-          <p>Compartilhei três práticas que têm melhorado significativamente a performance e a organização dos meus pipelines com Airflow. São dicas diretas e aplicáveis — desde o uso inteligente de sensores até a padronização de tarefas — pensadas para quem busca eficiência e escalabilidade no dia a dia com dados.</p>
-          <p><strong>📅 Publicado em:</strong> 13 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7383489816950210560/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal5" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal5')">&times;</span>
-          <h3>5 recursos do Databricks que todo engenheiro de dados precisa conhecer 🚀</h3>
-          <p>O Databricks vem ganhando espaço como uma das plataformas mais completas para engenharia de dados e IA. Nesta publicação, compartilhei de forma leve e visual os 5 recursos que considero indispensáveis para qualquer profissional da área.</p>
-          <p>Cada item foi apresentado de forma direta, pensado para facilitar o entendimento. A ideia é mostrar como essas ferramentas podem transformar a forma como lidamos com dados — da ingestão à governança, passando por machine learning e orquestração.</p>
-          <p><strong>📅 Publicado em:</strong> 9 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382103119221944320/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal4" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
-          <h3>Pandas vs Spark: Qual usar e quando? 🐼</h3>
-          <p>Muitos profissionais me perguntam qual a diferença entre trabalhar com Pandas e Spark no Python. Então decidi montar uma explicação prática e direta para esclarecer essa dúvida comum entre quem atua com dados. Na publicação, comparo os dois frameworks, apresento um exemplo prático e explico quando cada um é mais indicado — seja para prototipagem local ou para processamento distribuído em larga escala.</p>
-          <p><strong>📅 Publicado em:</strong> 7 de outubro de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal3" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
-          <h3>O poder de uma pausa consciente ✨🌍</h3>
-          <p>Após um acidente inesperado, decidi fazer uma pausa planejada na vida profissional — não apenas por necessidade física, mas como um convite à reconexão pessoal. Nesse período, mergulhei em cursos, viagens e reflexões profundas que me ajudaram a ressignificar meu caminho. Entre florestas tropicais, canais europeus e momentos em família, redescobri paixões, cultivei novos aprendizados e reencontrei propósito. Hoje retorno com mais energia, foco e equilíbrio — pronto para entregar o melhor com autenticidade e alma.</p>
-          <p><strong>📅 Publicado em:</strong> 31 de julho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal2" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
-          <h3>Ferramentas de IA: Pagas vs Gratuitas 🔥</h3>
-          <p>Com o crescimento acelerado da Inteligência Artificial, surgem cada vez mais opções de ferramentas — algumas gratuitas, outras pagas. Mas será que as versões gratuitas realmente se comparam às profissionais? Nessa publicação, compartilhei uma seleção de ferramentas de IA com o objetivo de incentivar a reflexão sobre suas aplicações. Também me coloquei à disposição para uma conversa aberta sobre como escolher a ferramenta certa para cada contexto.</p>
-          <p><strong>📅 Publicado em:</strong> 20 de junho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
-        </div>
-      </div>
-
-      <div id="modal1" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
-          <h3>36 Ferramentas de IA para todas as situações 🚀</h3>
-          <p>Você já se viu diante de um desafio e pensou: “Será que existe uma ferramenta de IA que resolve isso?” Nessa publicação, compartilhei uma lista com 36 ferramentas de Inteligência Artificial que podem te salvar em momentos críticos — seja para produtividade, criatividade, análise de dados, automação ou geração de ideias. Uma curadoria prática e atualizada para quem quer explorar o poder da IA no dia a dia.</p>
-          <p><strong>📅 Publicado em:</strong> 10 de junho de 2025</p>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank" rel="noopener noreferrer">🔗 Ver publicação no LinkedIn</a>
+          <div class="newsletter-buttons">
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7401253532592574464" class="news-btn">Assinar</a>
+            <a href="https://www.linkedin.com/newsletters/engenharia-de-dados-em-foco-7401253532592574464/" class="news-btn-outline">Visualizar</a>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="section" id="publicacoes" role="region" aria-label="Publicações e insights">
+      <h2>Publicações e Insights</h2>
+      <p>Nesta seção, compartilho reflexões, aprendizados e experiências. São conteúdos que abordam tecnologia, inteligência artificial, carreira e desenvolvimento pessoal — sempre com o propósito de inspirar, provocar ideias e gerar conexões.</p><br>
+
+      <table>
+        <thead>
+          <tr><th>🔹 Título</th><th>📅 Data</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Fim da série ou começo de uma nova conversa?</td><td style="text-align: center">03/12/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7401980895353704448/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Entendendo os papéis no mundo dos dados</td><td style="text-align: center">01/12/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7401271444552286208/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Edge Computing e IoT: O dado está saindo do data center e indo direto para a borda?</td><td style="text-align: center">27/11/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7399796683431350272/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>IA Generativa na Engenharia de Dados: Hype ou revolução silenciosa?</td><td style="text-align: center">19/11/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7396886981667897344/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>No Code / Low Code: Ameaça ou aliada da engenharia de dados?</td><td style="text-align: center">12/11/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7394358798552907776/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Cloud-Native e DataOps: A nova espinha dorsal da engenharia de dados?</td><td style="text-align: center">05/11/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7391816449415086080/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>ETL está com os dias contados?</td><td style="text-align: center">29/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7389265668350820352/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Engenharia de Dados: O que está mudando?</td><td style="text-align: center">22/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7386770132288716800/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Dica rápida para quem trabalha com dados</td><td style="text-align: center">15/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7384247738026201088/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>3 formas de otimizar seus pipelines de dados com Apache Airflow</td><td style="text-align: center">13/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7383489816950210560/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>5 recursos do Databricks que todo engenheiro de dados precisa conhecer</td><td style="text-align: center">09/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7382103119221944320/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Pandas vs Spark: Qual usar e quando?</td><td style="text-align: center">07/10/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7381343832275116032/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>O poder de uma pausa consciente</td><td style="text-align: center">31/07/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7346266555590008833/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>Ferramentas de IA: Pagas vs Gratuitas</td><td style="text-align: center">20/06/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7330606270929862657/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+          <tr><td>36 Ferramentas de IA para todas as situações</td><td style="text-align: center">10/06/2025</td><td style="text-align: center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7327799490478796801/" target="_blank" rel="noopener noreferrer">🔍</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="section" id="servicos">
       <h2>Serviços</h2>
-      <p>Estas são algumas das minhas habilidades que posso utilizar para gerar soluções eficientes e eficazes em problemas que você possa enfrentar.</p>
-
+      <p>Habilidades que aplico para gerar soluções eficientes e eficazes em problemas que você possa enfrentar.</p>
       <div class="servicos-grid">
         <div class="servicos-card">
           <h3>📊 Análise Descritiva</h3>
@@ -298,7 +165,7 @@
     <div class="section" id="contato">
       <h2>Contato</h2>
       <p>Preencha o formulário abaixo.<br>
-         Será uma honra poder te ajudar!</p>
+         Será um prazer ajudar você!</p>
 
       <form id="form-contato" class="form-contato" action="https://formsubmit.co/viana.cviana@gmail.com" method="POST">
         <input type="hidden" name="_next" value="https://christianovianagit.github.io/portfolio-web/?sucesso=true">
