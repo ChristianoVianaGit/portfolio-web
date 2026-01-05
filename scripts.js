@@ -82,4 +82,4 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio");
+// fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio");
