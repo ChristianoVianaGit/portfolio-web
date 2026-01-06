@@ -639,14 +639,13 @@ th {
   background: #e7f3ff;
 }
 
-/* Responsividade */
 @media (max-width: 600px) {
   .artigo-texto {
     text-align: left;
   }
 
   .artigo-link {
-    align-self: center;
+    align-self: flex-end;
     margin-top: 10px;
   }
 }
@@ -656,4 +655,23 @@ th {
   color: #888;
   text-align: right;
   margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .copyright {
+    position: static;
+    transform: none;
+    white-space: normal;
+  }
+
+  .language {
+    margin-left: 0;
+    white-space: normal;
+  }
 }
