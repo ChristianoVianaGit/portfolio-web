@@ -530,15 +530,14 @@ footer {
   background: #e7f3ff;
 }
 
-/* Responsivo */
 @media (max-width: 700px) {
   .newsletter-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
   }
 
   .newsletter-content {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -571,11 +570,11 @@ footer {
   white-space: nowrap;
 }
 
-/* Mobile: coloca um abaixo do outro */
 @media (max-width: 700px) {
   .newsletter-header {
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
