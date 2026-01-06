@@ -532,12 +532,12 @@ footer {
 
 @media (max-width: 700px) {
   .newsletter-container {
-    flex-direction: row;
-    text-align: left;
+    flex-direction: column;
+    text-align: center;
   }
 
   .newsletter-content {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -572,9 +572,8 @@ footer {
 
 @media (max-width: 700px) {
   .newsletter-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
