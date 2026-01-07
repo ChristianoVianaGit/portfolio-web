@@ -176,6 +176,32 @@ header {
   text-align: center;
 }
 
+.publicacoes-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.publicacoes-card-link:hover {
+  text-decoration: none;
+}
+
+.ver-todas {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ver-todas a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  gap: 6px;
+}
+
+.ver-todas a:hover {
+  text-decoration: underline;
+}
+
 .servicos-grid {
   display: flex;
   overflow-x: auto;
@@ -235,6 +261,7 @@ body.dark-mode {
 }
 
 body.dark-mode .section,
+body.dark-mode .publicacoes-card,
 body.dark-mode .project-card {
   background-color: var(--card-bg-dark);
   color: var(--text-dark);
