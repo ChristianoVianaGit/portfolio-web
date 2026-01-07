@@ -81,5 +81,3 @@ window.addEventListener("DOMContentLoaded", () => {
     history.replaceState({}, document.title, window.location.pathname);
   }
 });
-
-fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=portfolio");
