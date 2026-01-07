@@ -6,6 +6,7 @@
     <meta name="author" content="Christiano Viana">
     <meta name="keywords" content="Christiano Viana, Newsletter, Engenharia de Dados em Foco">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="Newsletter - Engenharia de Dados em Foco">
     <meta property="og:description" content="Newsletter - Engenharia de Dados em Foco">
@@ -14,6 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <title>Newsletter - Engenharia de Dados em Foco</title>
+    <link rel="canonical" href="https://christianovianagit.github.io/">
     <link rel="icon" href="./imagens/cviana.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -22,8 +24,8 @@
     <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
     <div id="mySidebar" class="sidebar" role="navigation" aria-label="Menu lateral de navegação">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#home">Bem-vindo</a>
+      <a href="index.html#sobre">Quem Sou Eu</a>
       <a href="index.html#projetos">Projetos</a>
       <a href="index.html#newsletter">Newsletter</a>
       <a href="index.html#publicacoes">Publicações</a>
@@ -36,82 +38,84 @@
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">🌙</button>
     </header>
 
-    <img src="./imagens/capa.png" alt="Imagem de capa com elementos visuais de tecnologia e dados" class="cover">
+    <main>
+      <img src="./imagens/capa.png" alt="Imagem de capa com elementos visuais de tecnologia e dados" class="cover" fetchpriority="high">
 
-    <div class="profile-wrapper">
-      <img src="./imagens/foto.jpeg" alt="Foto de perfil de Christiano Viana" class="profile-pic" loading="lazy">
-    </div>
+      <div class="profile-wrapper">
+        <img src="./imagens/foto.jpeg" alt="Foto de perfil de Christiano Viana" class="profile-pic" loading="lazy">
+      </div>
 
-    <div class="section" id="newsletter">
-      <div class="newsletter-container">
-        <img src="./imagens/Newsletter.png" alt="Newsletter Engenharia de Dados em Foco" class="newsletter-img-left">
+      <div class="section" id="newsletter">
+        <div class="newsletter-container">
+          <img src="./imagens/Newsletter.png" alt="Newsletter Engenharia de Dados em Foco" class="newsletter-img-left" loading="lazy">
 
-        <div class="newsletter-content">
-          <div class="newsletter-header">
-            <span class="newsletter-tag-left">📧 Newsletter</span>
-            <span class="newsletter-tag-right">Publicada quinzenalmente</span>
+          <div class="newsletter-content">
+            <div class="newsletter-header">
+              <span class="newsletter-tag-left">📧 Newsletter</span>
+              <span class="newsletter-tag-right">Publicada quinzenalmente</span>
+            </div>
+
+            <h2>Engenharia de Dados em Foco</h2>
+
+            <p>Uma newsletter quinzenal sobre engenharia de dados, BI, IA e Cloud.<br>
+            Casos reais, tendências e recomendações.</p>
+
+            <p>Escrita por <strong>Christiano Viana</strong><br>
+            Consultor & Engenheiro de Dados | BI & Analytics | Machine Learning & IA | Big Data & Cloud (AWS/Azure) | SQL & Python.</p>
           </div>
-
-          <h2>Engenharia de Dados em Foco</h2>
-
-          <p>Uma newsletter quinzenal sobre engenharia de dados, BI, IA e Cloud.<br>
-          Casos reais, tendências e recomendações.</p>
-
-          <p>Escrita por <strong>Christiano Viana</strong><br>
-          Consultor & Engenheiro de Dados | BI & Analytics | Machine Learning & IA | Big Data & Cloud (AWS/Azure) | SQL & Python.</p>
         </div>
       </div>
-    </div>
 
-    <div class="section" id="artigo_3-linkedin">
-      <div class="artigo-container">
-        <div class="artigo-meta">Publicado em 04/01/2026</div>
-        <img src="./imagens/artigo_3.png" alt="Data Fabric vs. Data Mesh" class="artigo-img-top">
-        <div class="artigo-texto">
-          <p><strong>Data Fabric vs. Data Mesh: Diferenças, complementaridades e quando usar cada abordagem.</strong>
-          <br>Dois conceitos, múltiplas possibilidades. Confira meu artigo sobre Data Fabric e Data Mesh e quando usar cada um.</p>
+      <div class="section" id="artigo_3-linkedin">
+        <div class="artigo-container">
+          <div class="artigo-meta">Publicado em 04/01/2026</div>
+          <img src="./imagens/artigo_3.png" alt="Data Fabric vs. Data Mesh" class="artigo-img-top" loading="lazy">
+          <div class="artigo-texto">
+            <p><strong>Data Fabric vs. Data Mesh: Diferenças, complementaridades e quando usar cada abordagem.</strong>
+            <br>Dois conceitos, múltiplas possibilidades. Confira meu artigo sobre Data Fabric e Data Mesh e quando usar cada um.</p>
+          </div>
+          <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7413546518735147010/" target="_blank" class="artigo-link">Ler artigo...</a>
         </div>
-        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7413546518735147010/" target="_blank" class="artigo-link">Ler artigo...</a>
       </div>
-    </div>
 
-    <div class="section" id="artigo_2-linkedin">
-      <div class="artigo-container">
-        <div class="artigo-meta">Publicado em 16/12/2025</div>
-        <img src="./imagens/artigo_2.png" alt="Não existe Cloud perfeito" class="artigo-img-top">
-        <div class="artigo-texto">
-          <p><strong>Não existe Cloud perfeito, existe Cloud certo para o problema que você precisa resolver agora.</strong>
-          <br>Escolher uma plataforma de cloud não é decidir qual é a “melhor”, mas sim qual resolve seu problema hoje e cresce com a sua estratégia amanhã.</p>
+      <div class="section" id="artigo_2-linkedin">
+        <div class="artigo-container">
+          <div class="artigo-meta">Publicado em 16/12/2025</div>
+          <img src="./imagens/artigo_2.png" alt="Não existe Cloud perfeito" class="artigo-img-top" loading="lazy">
+          <div class="artigo-texto">
+            <p><strong>Não existe Cloud perfeito, existe Cloud certo para o problema que você precisa resolver agora.</strong>
+            <br>Escolher uma plataforma de cloud não é decidir qual é a “melhor”, mas sim qual resolve seu problema hoje e cresce com a sua estratégia amanhã.</p>
+          </div>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406681487921532929/" target="_blank" class="artigo-link">Ler artigo...</a>
         </div>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406681487921532929/" target="_blank" class="artigo-link">Ler artigo...</a>
       </div>
-    </div>
 
-    <div class="section" id="artigo_1-linkedin">
-      <div class="artigo-container">
-        <div class="artigo-meta">Publicado em 02/12/2025</div>
-        <img src="./imagens/artigo_1.png" alt="Engenharia de Dados em Transformação" class="artigo-img-top">
-        <div class="artigo-texto">
-          <p><strong>Engenharia de Dados em Transformação: Tendências que estão redefinindo o papel do engenheiro de dados.</strong>
-          <br>De executor a estrategista de dados. O futuro do engenheiro de dados passa por IA, Cloud e IoT. 
-          <br>Descubra como essas tendências vão transformar decisões em tempo real.</p>
+      <div class="section" id="artigo_1-linkedin">
+        <div class="artigo-container">
+          <div class="artigo-meta">Publicado em 02/12/2025</div>
+          <img src="./imagens/artigo_1.png" alt="Engenharia de Dados em Transformação" class="artigo-img-top" loading="lazy">
+          <div class="artigo-texto">
+            <p><strong>Engenharia de Dados em Transformação: Tendências que estão redefinindo o papel do engenheiro de dados.</strong>
+            <br>De executor a estrategista de dados. O futuro do engenheiro de dados passa por IA, Cloud e IoT. 
+            <br>Descubra como essas tendências vão transformar decisões em tempo real.</p>
+          </div>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7401627892373331968/" target="_blank" class="artigo-link">Ler artigo...</a>
         </div>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7401627892373331968/" target="_blank" class="artigo-link">Ler artigo...</a>
       </div>
-    </div>
 
-    <div class="section" id="artigo_0-linkedin">
-      <div class="artigo-container">
-        <div class="artigo-meta">Publicado em 01/12/2025</div>
-        <img src="./imagens/artigo_0.png" alt="Engenharia de Dados em Foco" class="artigo-img-top">
-        <div class="artigo-texto">
-          <p><strong>Vem aí a “Engenharia de Dados em Foco”: Uma newsletter para quem quer entender de verdade o futuro dos dados.</strong>
-          <br>A cada quinzena, vou compartilhar análises profundas, casos reais e boas práticas sobre o futuro da engenharia de dados.
-          <br>Assine e venha fazer parte dessa jornada. O primeiro artigo já está chegando.</p>
+      <div class="section" id="artigo_0-linkedin">
+        <div class="artigo-container">
+          <div class="artigo-meta">Publicado em 01/12/2025</div>
+          <img src="./imagens/artigo_0.png" alt="Engenharia de Dados em Foco" class="artigo-img-top" loading="lazy">
+          <div class="artigo-texto">
+            <p><strong>Apresento a “Engenharia de Dados em Foco”: Uma newsletter para quem quer entender de verdade o futuro dos dados.</strong>
+            <br>A cada quinzena, vou compartilhar análises profundas, casos reais e boas práticas sobre o futuro da engenharia de dados.
+            <br>Assine e venha fazer parte dessa jornada. O primeiro artigo já está chegando.</p>
+          </div>
+          <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7401260620135776256/" target="_blank" class="artigo-link">Ler artigo...</a>
         </div>
-        <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7401260620135776256/" target="_blank" class="artigo-link">Ler artigo...</a>
       </div>
-    </div>
+    </main>
 
     <footer class="footer">
       <div class="footer-content">
@@ -120,6 +124,6 @@
       </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
   </body>
 </html>
