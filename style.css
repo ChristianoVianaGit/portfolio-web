@@ -529,6 +529,7 @@ footer {
 
 /* Botão azul */
 .news-btn {
+  border: 2px solid #0a66c2;
   background: #0a66c2;
   color: white;
 }
@@ -536,7 +537,6 @@ footer {
   background: #004f93;
 }
 
-/* Botão com contorno */
 .news-btn-outline {
   border: 2px solid #0a66c2;
   color: #0a66c2;
@@ -695,5 +695,17 @@ th {
   .language {
     margin-left: 0;
     white-space: normal;
+  }
+}
+
+@media (max-width: 700px) {
+  #newsletter .newsletter-header {
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  #newsletter .newsletter-tag-left {
+    text-align: left;
+    align-self: center;
   }
 }
