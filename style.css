@@ -709,3 +709,43 @@ th {
     align-self: center;
   }
 }
+
+.publicacoes-destaque {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.ver-todas a {
+  color: #000;
+}
+
+body.dark-mode .ver-todas a {
+  color: #fff;
+}
+
+body.dark-mode .newsletter-tag-left,
+body.dark-mode .newsletter-tag-right {
+  color: #fff;
+}
+
+body.dark-mode .news-btn-outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark-mode .news-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .artigo-meta {
+  color: #fff;
+}
+
+body.dark-mode .artigo-link {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark-mode .artigo-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
